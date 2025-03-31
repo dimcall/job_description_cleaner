@@ -75,7 +75,6 @@ for split, files in splits.items():
             
         # Extract text chunks and clean them
         text_chunks = clean_html_format(html)
-
         # Include only chunks with 2 or more words
         target = "\n".join([fix_merged_phrases(chunk) for chunk in text_chunks if len(chunk.strip().split()) >= 2])
         # Skip empty targets
