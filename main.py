@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
