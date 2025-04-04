@@ -13,7 +13,22 @@ This project includes:
 
 ## 📁 Project Structure
 
-<pre> . ├── cleaner/ # HTML cleaning, noise generation, utilities ├── data/ │ ├── htmls/ # Raw HTML job descriptions │ └── splits/ # Train/val/test datasets (.jsonl) ├── flan-t5-small-finetuned/ # Trained model checkpoints ├── scripts/ │ ├── generate_dataset.py # Generate noisy/clean dataset │ ├── train.py # Model training script │ └── evaluate.py # BLEU, ROUGE evaluation ├── main.py # FastAPI server for inference ├── client_interface.py # Local script to query the model └── README.md </pre>
+
+```text
+.
+├── cleaner/                   # HTML cleaning, noise generation, utilities
+├── data/
+│   ├── htmls/                 # Raw HTML job descriptions
+│   └── splits/                # Train/val/test datasets (.jsonl)
+├── flan-t5-small-finetuned/  # Trained model checkpoints
+├── scripts/
+│   ├── generate_dataset.py   # Generate noisy/clean dataset
+│   ├── train.py              # Model training script
+│   └── evaluate.py           # BLEU, ROUGE evaluation
+├── main.py                   # FastAPI server for inference
+├── client_interface.py       # Local script to query the model
+└── README.md
+```
 
 ## 🔧 Setup
 
