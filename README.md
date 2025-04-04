@@ -3,16 +3,14 @@
 A multilingual sequence-to-sequence system that cleans job descriptions by removing HTML tags, fixing merged words, and formatting the content into readable chunks.
 
 This project includes:
+
 - 💾 Dataset generation from noisy HTML files
 - 🧠 Fine-tuning a `flan-t5-small` model on synthetic noisy → clean examples
 - 📈 Evaluation using BLEU, ROUGE, and exact match rate
-- 🚀 Inference served through FastAPI REST API
-- 🧪 Local client interface for testing the model easily
 
 ---
 
 ## 📁 Project Structure
-
 
 ```text
 .
