@@ -12,7 +12,7 @@ model_path = "./flan-t5-small-finetuned_doc/checkpoint-2808"
 # Load model and tokenizer
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 model = AutoModelForSeq2SeqLM.from_pretrained(model_path)
-
+model.to("cuda")
 class HtmlInput(BaseModel):
     html: str
 
@@ -28,6 +28,7 @@ def predict(requests: List[HtmlInput]):
         for chunk in text_chunks:
             # Tokenize
             inputs = tokenizer(chunk, return_tensors="pt", truncation=True)
+            inputs = inputs.to("cuda")
             # Generate output
             outputs = model.generate(**inputs, max_length=512)
             # Decode

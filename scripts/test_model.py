@@ -10,9 +10,7 @@ model = AutoModelForSeq2SeqLM.from_pretrained(model_path)
 model = model.to("cpu")
 
 # Input text to clean
-#input_text = "<p><strong>IHRE AUFGABE</strong><br />Als Head of ITServicedesksindSie in 1. Linie fürfolgende Aufgaben zuständig:<br /><br /></ p><ul><li>Personelleund- fachliche Führung</li>"
-
-input_text = """<p>Für unseren Kunden suchenwir Sie als erfahrenen Fassadenisoleur</p><p><br /><strong>Anforderungen:</strong><br />- langjährige Erfahrung als Fassadenisoleur<br />- Kompaktfassaden, Styropor, Mineralwolle sind kein Fremdwörter für Sie<br />- Führerschein Kat B von Vorteil<br />- deutsche Sprachkenntnisse <br />- zuverlässig undselbstständiges Arbeiten gewohnt</p><p> </p><p><strong>Arbeitsort:</strong><br />- Basel und Umgebung<br /><br />Haben wir Ihr Interessegeweckt? Dann freuen wiruns auf Ihre aussagekräftige Bewerbung per Email.</p>"""
+input_text = "<p><strong>IHRE AUFGABE</strong><br />Als Head of ITServicedesk sind Sie in 1. Linie für folgende Aufgaben zuständig:<br /><br /></ p><ul><li>Personelleund-fachliche Führung</li>"
 # Clean HTML and split into chunks
 text_chunks = clean_html_format(input_text)
 

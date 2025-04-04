@@ -58,10 +58,3 @@ def clean_html_format(html:str)->list:
 
     return text_chunks
 
-
-
-# # Test the function
-# html = '''
-# <p><strong>IHRE AUFGABE</strong><br />Als Head of ITServicedesk sind Sie in 1. Linie für folgende Aufgaben zuständig:<br /><br /></ p><ul><li>Personelleund- fachliche Führung</li>
-# '''
-# print(clean_html_format(html))

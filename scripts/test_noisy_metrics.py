@@ -18,10 +18,6 @@ test_file = "data/splits/dataset_test_noisy.jsonl"
 with open(test_file, "r", encoding="utf-8") as f:
     test_data = [json.loads(line) for line in f]
 
-# Evaluate on a subset
-#MAX_EXAMPLES = 300
-#test_data = test_data[:MAX_EXAMPLES]
-
 # Store predictions and targets
 preds = []
 targets = []
